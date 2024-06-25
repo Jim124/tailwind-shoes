@@ -37,7 +37,7 @@ export function Nav() {
       </div>
       {/* cart button */}
       <div className='fixed left-4 bottom-4 lg:static lg:mr-8'>
-        <div className='flex-center rounded-full h-12 w-12 bg-white shadow-md cursor-pointer'>
+        <div className='flex-center rounded-full h-12 w-12 bg-white shadow-md cursor-pointer btn-press-anim'>
           <TbShoppingBag />
         </div>
       </div>
