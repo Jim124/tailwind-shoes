@@ -4,7 +4,15 @@ import { NewArrivals } from './components/NewArrivals';
 import { Sidebar } from './components/Sidebar';
 import { ShowDetail } from './components/ShowDetail';
 import { SHOE_LIST } from './constants';
-import { CartItem } from './components/CartItem';
+import { Cart } from './components/Cart';
+
+const Fake_Cart_Items = SHOE_LIST.map((shoe) => {
+  return {
+    product: shoe,
+    qty: 1,
+    size: 44,
+  };
+});
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
@@ -16,10 +24,7 @@ function App() {
         isOpen={isSidebarOpen}
         onCloseSidebar={() => setIsSidebarOpen(false)}
       >
-        <h2 className='text-2xl font-bold mb-10'>Cart</h2>
-        <CartItem item={SHOE_LIST[0]} />
-        <CartItem item={SHOE_LIST[0]} />
-        <CartItem item={SHOE_LIST[0]} />
+        <Cart cartItems={Fake_Cart_Items} />
       </Sidebar>
     </div>
   );
