@@ -10,12 +10,12 @@ export function Nav({ onClickShoppingBtn }) {
     <nav className='relative z-10 flex flex-wrap justify-between items-center'>
       {/* logo */}
       <a>
-        <NickLogo className=' h-20 w-20' />
+        <NickLogo className='dark:fill-white h-20 w-20' />
       </a>
       {/* burger button */}
       <button
         onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
-        className='hover:bg-gray-100 p-2 focus:ring-2 focus:ring-gray-200  rounded-lg lg:hidden'
+        className='hover:bg-gray-100 p-2 focus:ring-2 focus:ring-gray-200  rounded-lg lg:hidden dark:text-gray-400 dark:hover:bg-gray-700'
       >
         <RxHamburgerMenu size={25} />
       </button>
@@ -23,7 +23,7 @@ export function Nav({ onClickShoppingBtn }) {
       <div
         className={`${!isMobileMenuShown && 'hidden'} w-full lg:w-auto lg:block`}
       >
-        <ul className='bg-gray-50 lg:bg-transparent text-lg border border-gray-100 lg:border-none rounded-lg p-4 flex flex-col lg:flex-row lg:space-x-8  '>
+        <ul className='bg-gray-50 lg:bg-transparent text-lg border border-gray-100 lg:border-none rounded-lg p-4 flex flex-col lg:flex-row lg:space-x-8 lg:dark:text-white  '>
           {ROUTES.map((route, index) => (
             <li
               className={`lg:hover:bg-transparent lg:hover:text-blue-500 rounded cursor-pointer px-3 py-2 mb-1 ${index === 0 ? 'bg-blue-500 text-white lg:bg-transparent lg:text-blue-500' : 'hover:bg-gray-100'}
